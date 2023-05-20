@@ -61,6 +61,10 @@ def get_biostars_dataset(start_idx=9557161, accept_threshold=1000000, sleep=0.1,
         if has_accepted_count == accept_threshold:
             print(f"{accept_threshold} entries with has_accepted found. Stopping.")
             break
+            
+        if r.status_code = 404:
+            data = r.json()
+            print("HTTP error detected. please restart open-assistant")
 
         pbar.set_description(f"Item: {idx}; Accepted {has_accepted_count}")
         # tqdm.set_description(f"Cur: {idx}; Accepted: {has_accepted_count}")
