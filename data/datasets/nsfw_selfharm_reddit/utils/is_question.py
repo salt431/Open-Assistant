@@ -8,7 +8,7 @@ class IsQuestion:
         self.classifier = pipeline("sentiment-analysis", model=self.model, tokenizer=self.tokenizer)
         self.labels = {
             "LABEL_0": False,
-            "LABEL_1": True,
+            "LABEL_1": False,
         }
 
     def __call__(self, text: str) -> bool:
